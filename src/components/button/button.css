@@ -1,0 +1,28 @@
+.button{
+    padding: 1rem 2rem;
+    border: solid 2px #FFFFFF;
+    transition: all 0.125s;
+    background-color: rgb(25, 25, 30, 50);
+}
+
+.button:hover{
+    color: #19191E;
+    background-color: #FFFFFF;
+}
+
+.nav{
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.logo{
+    font-weight: 900;
+}
+
+.right{
+    border-left: solid 2px #FFFFFF;
+    border-right: 0px;
+    position: absolute;
+    right: 0;
+}
