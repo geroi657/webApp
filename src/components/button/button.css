@@ -1,5 +1,7 @@
 .button{
     padding: 1rem 2rem;
+    display: inline-block;
+    width: auto;
     border: solid 2px #FFFFFF;
     transition: all 0.125s;
     background-color: rgb(25, 25, 30, 50);
