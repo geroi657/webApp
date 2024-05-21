@@ -10,7 +10,11 @@ export default function App() {
       <Header></Header>
       <Wrapper>
         <Container>
-          <Left_B></Left_B>
+          <Left_B 
+          level={"1"} 
+          headingContent={"Хочешь стать Web-разработчиком?"} 
+          paragraphContent={"Попробуй наши курсы, где ты сможешь в игровой форме обучиться базовым концептам Web-программирования"}
+          buttonContent={"Начни сейчас"}></Left_B>
         </Container>
       </Wrapper>
     </>
