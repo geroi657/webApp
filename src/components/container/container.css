@@ -4,4 +4,12 @@
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+@media (width > 1920px) {
+    .container{
+        border-right: 1px solid #FFFFFF;
+        border-left: 1px solid #FFFFFF;
+    }
 }

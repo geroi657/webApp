@@ -4,7 +4,7 @@ import Heading from "../heading/heading";
 import Paragraph from "../paragraph/paragraph";
 import Button from "../button/button";
 
-export default function Left_B({level, headingContent, paragraphContent, buttonContent}) {
+export default function Left_B({level, backgroundURL, headingContent, paragraphContent, buttonContent}) {
     return (
         <div className="left_B">
             <div className="left_B__container">
@@ -13,7 +13,7 @@ export default function Left_B({level, headingContent, paragraphContent, buttonC
                 <Button text={ buttonContent }></Button>
             </div>
             <div className="overlap">
-                <img className="left_B__background" src="/src/assets/giphy.gif" alt="bleb" />
+                <img className="left_B__background" src={`${backgroundURL}`} alt="bleb" />
                 <div className="gradient"></div>
             </div>
         </div>
