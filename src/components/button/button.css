@@ -2,7 +2,6 @@
     border: solid 2px #FFFFFF;
     padding: 1rem 2rem;
     transition: all 0.125s;
-    background-color: rgba(25, 25, 30, 0.5);
     z-index: 1;
 }
 

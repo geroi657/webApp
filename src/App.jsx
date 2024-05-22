@@ -3,6 +3,7 @@ import Container from './components/container/container.jsx';
 import Header from './components/header/header.jsx';
 import Wrapper from './components/wrapper/wrapper.jsx';
 import Left_B from './components/left_B/left_B.jsx';
+import Center_B from './components/Center_B/center_B.jsx';
 
 export default function App() {
   return (
@@ -18,12 +19,28 @@ export default function App() {
           backgroundURL={"/src/assets/giphy.gif"}></Left_B>
         </Container>
         <Container>
+          <Center_B 
+          level={"2"} 
+          headingContent={"Поддержите нас на Patreon"} 
+          paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу. Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"} 
+          buttonContent={"Посмотреть виды переводов"}
+          backgroundURL={"/src/assets/150199145759869221741317 1.png"}></Center_B>
+        </Container>
+        <Container>
         <Left_B 
           level={"2"} 
           headingContent={"Поддержите нас на Patreon"} 
           paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"}
           buttonContent={"Посмотреть виды переводов"}
           backgroundURL={"/src/assets/downloads_logomark_color_on_white@2x.png"}></Left_B>
+        </Container>
+        <Container>
+          <Center_B 
+          level={"2"} 
+          headingContent={"Поддержите нас на Patreon"} 
+          paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу. Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"} 
+          buttonContent={"Посмотреть виды переводов"}
+          backgroundURL={"/src/assets/150199145759869221741317 1.png"}></Center_B>
         </Container>
       </Wrapper>
     </>
