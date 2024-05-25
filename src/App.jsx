@@ -40,7 +40,7 @@ export default function App() {
           headingContent={"Поддержите нас на Patreon"} 
           paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу. Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"} 
           buttonContent={"Посмотреть виды переводов"}
-          backgroundURL={"/src/assets/150199145759869221741317 1.png"}></Center_B>
+          backgroundURL={"/src/assets/backgroundCode.png"}></Center_B>
         </Container>
       </Wrapper>
     </>
