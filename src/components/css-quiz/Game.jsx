@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Question from './Questions';
-import questions from './ListQuestions';
-import './Game.css';
+import Question from './questions';
+import questions from './list_questions';
+import './game.css';
 
 const Game = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

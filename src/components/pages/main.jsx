@@ -12,7 +12,7 @@ export const Main = () => {
                         level={"1"} 
                         headingContent={"Хочешь стать Web-разработчиком?"} 
                         paragraphContent={"Попробуй наши курсы, где ты сможешь в игровой форме обучиться базовым концептам Web-программирования"}
-                        buttonContent={"Да ебись ты в рот"}
+                        buttonContent={"Перейти к курсам"}
                         backgroundURL={"/src/assets/giphy.gif"}></Left_B>
                 </Container>
                 <Container>
