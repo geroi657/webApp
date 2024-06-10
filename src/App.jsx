@@ -13,7 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/css-grid-garden" element={<GridGame/>}/>
-          <Route path='/ccs-quiz' element={<Game/>}/>
+          <Route path='/css-quiz' element={<Game/>}/>
         </Routes>
       </Router>
     </>

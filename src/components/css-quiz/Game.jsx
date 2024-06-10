@@ -23,10 +23,15 @@ const Game = () => {
       setScore(score + 1);
     }
 
+
     const nextQuestionIndex = currentQuestionIndex + 1;
-    if (nextQuestionIndex < shuffledQuestions.length) {
+    if (selectedOption != shuffledQuestions[currentQuestionIndex].answer) {
+      setCurrentQuestionIndex(currentQuestionIndex);
+    }
+    else if (nextQuestionIndex < shuffledQuestions.length) {
       setCurrentQuestionIndex(nextQuestionIndex);
-    } else {
+    }
+    else {
       setShowScore(true);
     }
   };

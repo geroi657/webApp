@@ -17,7 +17,7 @@
   }
   
   .question {
-    margin: 20px;
+    margin: 10px;
     max-width: 600px; /* Ограничивает максимальную ширину */
     text-align: left; /* Выравнивание текста по левому краю */
   }
@@ -28,33 +28,34 @@
   }
   
   .question div {
-    margin: 10px 0;
+    margin: 40px 0;
+    padding: 7px 0;
+    border-radius: 20px;
   }
   .question .correct {
-    color: #4CAF50; /* Зеленый цвет для правильного ответа */
+    background-color: darkgreen;
   }
   
   .question .incorrect {
-    color: #FF5733; /* Красный цвет для неправильного ответа */
+    background-color: darkred;
   }
   
   
   .question input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   
   .question button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border: solid 2px #FFFFFF;
+    padding: 1rem 2rem;
+    transition: all 0.125s;
+    z-index: 1;
   }
   
   .question button:hover {
-    background-color: #45a049;
+    background-color: white;
+    color: black;
   }
   

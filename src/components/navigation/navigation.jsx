@@ -8,7 +8,7 @@ export default function Navigation() {
         <Link to="/" relative='path'><Button variant="nav logo" text={'WA'} ></Button></Link>
         <Button variant="nav" text={'HTML'}></Button>
         <Link to="/css-grid-garden"><Button variant="nav" text={'Grid Garden'}></Button></Link>
-        <Link to="/ccs-quiz"><Button variant="nav" text={'Broken Quiz'}></Button></Link>
+        <Link to="/css-quiz"><Button variant="nav" text={'Broken Quiz'}></Button></Link>
     </nav>
     )
 }
