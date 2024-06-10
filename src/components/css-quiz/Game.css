@@ -5,7 +5,6 @@
     justify-content: center;
     margin-left: 100px;
     height: 100vh; 
-    font-family: Arial, sans-serif;
   }
   
   .score-section {
@@ -17,26 +16,39 @@
   }
   
   .question {
-    margin: 10px;
-    max-width: 600px; /* Ограничивает максимальную ширину */
-    text-align: left; /* Выравнивание текста по левому краю */
+    margin: 10px; 
+    text-align: left; 
   }
   
   .question h2 {
-    font-size: 1.5em;
+    font-size: 40px;
+    line-height: 40px;
     margin-bottom: 10px;
+    max-width: 600px;
   }
   
   .question div {
+    display: flex;
     margin: 40px 0;
     padding: 7px 0;
+    max-width: 100%; 
     border-radius: 20px;
   }
+  
   .question .correct {
-    background-color: darkgreen;
+    background-color: initial;
   }
+  .question .correct:hover{
+    transition: all 0.2s;
+    background-color: darkgreen;
+}
   
   .question .incorrect {
+    background-color: initial;
+  }
+
+  .question .incorrect:hover {
+    transition: all 0.2s;
     background-color: darkred;
   }
   

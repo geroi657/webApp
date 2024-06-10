@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import './questions.css'
 
 const Question = ({ questionData, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
+    setDescription(questionData.description[e.target.value]); // Устанавливаем описание при выборе варианта
   };
 
   const handleSubmit = () => {
-    onAnswer(selectedOption);
+    if (selectedOption) {
+      onAnswer(selectedOption);
+      setDescription();
+    }
   };
 
   return (
@@ -30,7 +36,8 @@ const Question = ({ questionData, onAnswer }) => {
           </div>
         );
       })}
-      <button onClick={handleSubmit}>Отправить</button>
+      <button onClick={handleSubmit}>Ответить</button>
+      {description && <p className="description">{description}</p>}
     </div>
   );
 };
