@@ -1,0 +1,12 @@
+.start_game {
+    margin-top: 20px;
+    border: solid 2px #FFFFFF;
+    padding: 1rem 2rem;
+    transition: all 0.125s;
+  }
+  
+  .start_game:hover {
+    background-color: white;
+    color: black;
+  }
+
