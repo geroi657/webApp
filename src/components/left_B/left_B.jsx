@@ -4,13 +4,19 @@ import Heading from "../heading/heading";
 import Paragraph from "../paragraph/paragraph";
 import Button from "../button/button";
 
-export default function Left_B({level, backgroundURL, headingContent, paragraphContent, buttonContent}) {
+export default function Left_B({level, backgroundURL, headingContent, paragraphContent, buttonContent, buttonHref}) {
+
+    function getAlert() {
+        alert("Working!");
+    }
+    
+
     return (
         <div className="left_B">
             <div className="left_B__container">
                 <Heading level={ level } headingContent={ headingContent }></Heading>
                 <Paragraph paragraphContent={ paragraphContent }></Paragraph>
-                <Button text={ buttonContent }></Button>
+                <Button text={ buttonContent } href={ buttonHref }></Button>
             </div>
             <div className="overlap">
                 <img className="left_B__background" src={`${backgroundURL}`} alt="bleb" />
