@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Question from './questions';
 import questions from './list_questions';
 import './game.css';
-import { Link } from 'react-router-dom';
 import Button from '../button/button';
 import Intro from './intro';
 
@@ -48,7 +47,7 @@ const Game = () => {
       ) : showScore ? (
         <div className="score-section">
           <h2>Вы молодцы! Ваш результат: {score} из {shuffledQuestions.length}!</h2>
-          <Link to={"/"}><Button text="Выйти" /></Link>
+          <Button variant={"button"} text="Выйти" href={"/"}></Button>
         </div>
       ) : (
         shuffledQuestions.length > 0 && (

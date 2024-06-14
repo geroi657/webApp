@@ -1,7 +1,7 @@
 import './paragraph.css';
 
-export default function Paragraph({ paragraphContent }) {
+export default function Paragraph({ paragraphContent, className }) {
     return (
-        <p className="paragraph">{ paragraphContent }</p>
+        <p className={className}>{ paragraphContent }</p>
     );
 }

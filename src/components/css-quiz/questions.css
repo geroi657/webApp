@@ -1,5 +1,11 @@
 
+.question {
+  margin: 10px;
+  text-align: left;
+}
+
 .description {
+  display: inline-block;
   position: absolute;
   top: 300px;
   right: 80px;
@@ -7,3 +13,67 @@
   text-align: right;
   font-size: 30px;
 }
+
+.question h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.question div {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  padding: 7px 0;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.question .correct {
+  background-color: initial;
+}
+
+.question .correct:hover {
+  transition: all 0.2s;
+  background-color: darkgreen;
+}
+
+.question .incorrect {
+  background-color: initial;
+}
+
+.question .incorrect:hover {
+  transition: all 0.2s;
+  background-color: darkred;
+}
+
+.question input[type="radio"] {
+  display: none;
+}
+
+.question label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.question label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 25px;
+  border: 3px solid #ccc;
+  border-radius: 50%; /* для круга, для квадрата можно убрать */
+  background-color: #ffffff00;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.question input[type="radio"]:checked + label::before {
+  background-color: #ffffff; 
+  border-color: white;
+}
+
+

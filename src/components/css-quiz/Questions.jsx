@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './questions.css';
+import Button from '../button/button';
 
 const Question = ({ questionData, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -7,7 +8,6 @@ const Question = ({ questionData, onAnswer }) => {
   const [shuffledOptions, setShuffledOptions] = useState([]);
 
   useEffect(() => {
-    // Перемешиваем варианты ответа при каждом новом вопросе
     setShuffledOptions(shuffleArray(questionData.options));
   }, [questionData]);
 
@@ -22,7 +22,7 @@ const Question = ({ questionData, onAnswer }) => {
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
-    setDescription(questionData.description[e.target.value]); // Устанавливаем описание при выборе варианта
+    setDescription(questionData.description[e.target.value]); 
   };
 
   const handleSubmit = () => {
@@ -51,7 +51,7 @@ const Question = ({ questionData, onAnswer }) => {
           </div>
         );
       })}
-      <button onClick={handleSubmit}>Ответить</button>
+      <Button text={"Ответить"} buttonFunction={handleSubmit}></Button>
       {description && <p className="description">{description}</p>}
     </div>
   );
