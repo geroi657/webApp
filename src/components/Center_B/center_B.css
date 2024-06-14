@@ -18,9 +18,11 @@
     flex-direction: column;
     row-gap: 1rem;
     align-items: center;
+    text-align: center;
 }
 
 .center_B__background{
+    opacity: 15%;
     position: absolute;
     top: 0;
     right: 0;

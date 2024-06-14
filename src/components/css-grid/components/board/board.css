@@ -1,0 +1,153 @@
+#board {
+    background-color: rgb(140, 200, 120);
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    position: relative;
+    padding: 2em;
+    margin-left: 100%;
+}
+
+#soil,
+#overlay,
+#garden,
+#plants {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    padding: 2em;
+    padding-top: 12vh;
+}
+
+#soil {
+    background-color: #523D1F;
+    overflow: hidden;
+}
+
+.plot {
+    display:inherit;
+    width: 100%;
+    height: 100%;
+    background-color: #6F532A;
+    background-color: #836B32;
+    background-image: url('../../assets/dirt.svg');
+    background-size: calc(10vw - 4px);
+}
+
+#overlay .plot {
+    z-index: 50;
+    background: none;
+    box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.05), inset -2px -2px 0 #665235;
+    
+}
+
+.plant,
+.treatment {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.plant .bg,
+.treatment .bg {
+    width: 100%;
+    height: 100%;
+    background-position: left top;
+    background-size: calc(10vw - 4px);
+}
+
+.plant.carrot .bg {
+    background-image: url("../../assets/carrots.svg");
+}
+
+.plant.weed .bg {
+    background-image: url("../../assets/weeds.svg");
+}
+
+.treatment.carrot .bg {
+    background-color: rgba(81, 140, 179, 1);
+    background-image: url("../../assets/water.svg");
+    animation: scroll 6s linear infinite;
+}
+
+.treatment.weed .bg {
+    background-color: #63393E;
+    background-image: url("../../assets/poison.svg");
+    animation: scroll 6s linear infinite;
+}
+
+.grid-column-start-1 {
+    grid-column-start: 1;
+}
+
+.grid-column-start-2 {
+    grid-column-start: 2;
+}
+
+.grid-column-start-5 {
+    grid-column-start: 5;
+}
+
+.grid-column-end-6 {
+    grid-column-end: 6;
+}
+
+.grid-column-4 {
+    grid-column: 4;
+    grid-row: 1 / 6;
+}
+
+.grid-template-columns-repeat-8-12 {
+    grid-template-columns: repeat(8, 12.5%) !important;
+}
+
+.grid-template-columns-100px-3em-40p {
+    grid-template-columns: 100px 3em 40% !important;
+}
+
+.grid-template-columns-1fr-5fr {
+    grid-template-columns: 1fr 5fr !important;
+}
+
+.grid-template-columns-75px-2fr-1fr {
+    grid-template-columns: 75px 2fr 1fr !important;
+}
+
+.grid-template-columns-50px-1fr-1fr-1fr-50px {
+    grid-template-columns: 50px 1fr 1fr 1fr 50px !important;
+}
+
+.grid-template-rows-50px-0-0-0-1fr {
+    grid-template-rows: 50px 0 0 0 1fr !important;
+}
+
+.grid-template-rows-100p {
+    grid-template-rows: 100% !important;
+}
+
+.grid-template-columns-6 {
+    grid-template-columns: 75px 3fr 2fr !important;
+    grid-template-rows: 100% !important;
+}
+
+.grid-area-1-1-6-2 {
+    grid-area: 1 / 1 / 6 / 2;
+}
+
+.grid-area-5-1-6-6 {
+    grid-area: 5 / 1 / 6 / 6;
+}
+
+.grid-area-1-5-6-6 {
+    grid-area: 1 / 5 / 6 / 6;
+}
+
+.grid-template-2 {
+    grid-template: 1fr 50px / 20% 1fr !important;
+}

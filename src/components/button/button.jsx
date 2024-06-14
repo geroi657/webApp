@@ -1,7 +1,7 @@
 import './button.css';
 
-export default function Button({text, variant, href, buttonFunction}) {
+export default function Button({text, variant}) {
     return (
-    <a className={variant ? "button " + (variant): "button"} href= { href } onClick={ buttonFunction }>{ text }</a>
+    <button className={variant ? "button " + (variant): "button"}>{ text }</button>
     );
 }

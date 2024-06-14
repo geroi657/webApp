@@ -1,48 +1,21 @@
 import './App.css';
-import Container from './components/container/container.jsx';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/header/header.jsx';
-import Wrapper from './components/wrapper/wrapper.jsx';
-import Left_B from './components/left_B/left_B.jsx';
-import Center_B from './components/Center_B/center_B.jsx';
+import { Main } from './components/pages/main.jsx';
+import GridGame from './components/css-grid/components/grid-game/grid-game.jsx'
+import Game from './components/css-quiz/Game.jsx';
 
 export default function App() {
   return (
     <>
-      <Header></Header>
-      <Wrapper>
-        <Container>
-          <Left_B 
-          level={"1"} 
-          headingContent={"Хочешь стать Web-разработчиком?"} 
-          paragraphContent={"Попробуй наши курсы, где ты сможешь в игровой форме обучиться базовым концептам Web-программирования"}
-          buttonContent={"Начни сейчас"}
-          backgroundURL={"/src/assets/giphy.gif"}></Left_B>
-        </Container>
-        <Container>
-          <Center_B 
-          level={"2"} 
-          headingContent={"Поддержите нас на Patreon"} 
-          paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу. Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"} 
-          buttonContent={"Посмотреть виды переводов"}
-          backgroundURL={"/src/assets/150199145759869221741317 1.png"}></Center_B>
-        </Container>
-        <Container>
-        <Left_B 
-          level={"2"} 
-          headingContent={"Поддержите нас на Patreon"} 
-          paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"}
-          buttonContent={"Посмотреть виды переводов"}
-          backgroundURL={"/src/assets/downloads_logomark_color_on_white@2x.png"}></Left_B>
-        </Container>
-        <Container>
-          <Center_B 
-          level={"2"} 
-          headingContent={"Поддержите нас на Patreon"} 
-          paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу. Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"} 
-          buttonContent={"Посмотреть виды переводов"}
-          backgroundURL={"/src/assets/backgroundCode.png"}></Center_B>
-        </Container>
-      </Wrapper>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Main/>}/>
+          <Route path="/css-grid-garden" element={<GridGame/>}/>
+          <Route path='/css-quiz' element={<Game/>}/>
+        </Routes>
+      </Router>
     </>
   )
 };

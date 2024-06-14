@@ -1,0 +1,102 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 100px;
+  height: 100vh;
+}
+
+.score-section {
+  margin-top: 20px;
+}
+
+.score-section h2 {
+  color: #4CAF50;
+  margin-bottom: 50px;
+}
+
+.question {
+  margin: 10px;
+  text-align: left;
+}
+
+.question h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.question div {
+  display: flex;
+  margin: 40px 0;
+  padding: 7px 0;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.question .correct {
+  background-color: initial;
+}
+
+.question .correct:hover {
+  transition: all 0.2s;
+  background-color: darkgreen;
+}
+
+.question .incorrect {
+  background-color: initial;
+}
+
+.question .incorrect:hover {
+  transition: all 0.2s;
+  background-color: darkred;
+}
+
+.question input[type="radio"] {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.question button {
+  margin-top: 20px;
+  border: solid 2px #FFFFFF;
+  padding: 1rem 2rem;
+  transition: all 0.125s;
+  z-index: 1;
+}
+
+.question button:hover {
+  background-color: darkgreen;
+  border: solid 2px darkgreen;
+}
+
+.intro-section {
+  margin-top: 50px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.intro-section h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.intro-section p {
+  margin-bottom: 15px;
+}
+
+.intro-section ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.intro-section ul li {
+  margin-bottom: 15px;
+}
+
+.intro-section strong {
+  font-weight: bold;
+}

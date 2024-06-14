@@ -1,0 +1,9 @@
+
+.description {
+  position: absolute;
+  top: 300px;
+  right: 80px;
+  max-width: 800px;
+  text-align: right;
+  font-size: 30px;
+}
