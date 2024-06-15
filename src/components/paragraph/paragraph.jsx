@@ -1,7 +1,7 @@
 import './paragraph.css';
 
-export default function Paragraph({ paragraphContent }) {
+export default function Paragraph({ paragraphContent, variant }) {
     return (
-        <p className="paragraph">{ paragraphContent }</p>
+        <p className={variant ? "paragraph " + (variant): "paragraph"}>{ paragraphContent }</p>
     );
 }
