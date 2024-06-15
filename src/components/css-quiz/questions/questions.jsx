@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './questions.css';
-import Button from '../button/button';
+import Button from '../../button/button';
 
 const Question = ({ questionData, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState("");

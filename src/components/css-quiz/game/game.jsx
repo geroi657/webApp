@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Question from './questions';
-import questions from './list_questions';
+import Question from '../questions/questions';
+import questions from '../list_questions/list_questions';
 import './game.css';
-import Button from '../button/button';
-import Intro from './intro';
+import Button from '../../button/button';
+import Intro from '../intro/intro';
 
 const Game = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

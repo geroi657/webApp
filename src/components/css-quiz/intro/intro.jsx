@@ -1,9 +1,9 @@
 import React from 'react';
 import './intro.css';
-import Button from '../button/button';
-import Paragraph from '../paragraph/paragraph';
-import Wrapper from '../wrapper/wrapper';
-import Heading from '../heading/heading';
+import Button from '../../button/button';
+import Paragraph from '../../paragraph/paragraph';
+import Wrapper from '../../wrapper/wrapper';
+import Heading from '../../heading/heading';
 
 const Intro = ({ startGame }) => {
   return (
