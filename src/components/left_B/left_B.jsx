@@ -6,10 +6,9 @@ import Button from "../button/button";
 
 export default function Left_B({level, backgroundURL, headingContent, paragraphContent, buttonContent, buttonHref}) {
 
-    function getAlert() {
-        alert("Working!");
+    function showAlert() {
+        alert("Works");
     }
-    
 
     return (
         <div className="left_B">
