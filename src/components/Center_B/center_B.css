@@ -1,0 +1,32 @@
+.center_B{
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center_B__container{
+    border-right: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    max-width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.center_B__background{
+    opacity: 15%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
