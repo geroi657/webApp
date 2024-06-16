@@ -1,0 +1,85 @@
+.travel-blog-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.travel-blog-header {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.travel-blog-nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.travel-blog-nav a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.travel-blog-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.travel-blog-section {
+    width: 70%;
+}
+
+.travel-blog-aside {
+    width: 25%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.travel-blog-article {
+    margin-bottom: 20px;
+}
+
+.travel-blog-h1,
+.travel-blog-h2,
+.travel-blog-h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.travel-blog-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.travel-blog-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-blog-form input,
+.travel-blog-form button {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.travel-blog-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.travel-blog-form button:hover {
+    background-color: #0056b3;
+}
+
+.travel-blog-footer {
+    text-align: center;
+    margin-top: 20px;
+}

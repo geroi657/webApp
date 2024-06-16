@@ -27,3 +27,17 @@
     position: absolute;
     right: 0;
 }
+
+.footerLogo{
+    width: 8rem;
+    height: fit-content;
+    text-align: center;
+    margin: 0;
+}
+
+.footerLink{
+    border: none;
+    width: 35%;
+    font-size: 1.25rem;
+    padding: 0.75rem;
+}

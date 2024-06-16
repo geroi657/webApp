@@ -1,8 +1,8 @@
 import './wrapper.css';
 
-export default function Wrapper({children, className}) {
+export default function Wrapper({children}) {
     return (
-        <div className={className}>
+        <div className="wrapper">
             {children}
         </div>
     );
