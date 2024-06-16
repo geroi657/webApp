@@ -5,7 +5,15 @@ import Paragraph from '../../paragraph/paragraph';
 import Wrapper from '../../wrapper/wrapper';
 import Heading from '../../heading/heading';
 
-const Intro = ({ startGame }) => {
+const Intro = ({ startGame, selectCategory }) => {
+  const categories = [
+    { name: 'Основы CSS', value: 'basic' },
+    { name: 'Селекторы', value: 'selectors' },
+    { name: 'Шрифты и текст', value: 'text' },
+    { name: 'Блочная модель', value: 'boxModel' },
+    { name: 'Позиционирование и Flexbox', value: 'flexbox' },
+  ];
+
   return (
     <Wrapper className={"intro-section"}>
       <Heading level={2} headingContent={"Добро пожаловать в CSS Quiz!"}/>
@@ -32,7 +40,16 @@ const Intro = ({ startGame }) => {
         <li> - Повышение уровня уверенности в своих знаниях.</li>
       </ul>
       
-      <Button className={"button"}text="Начать игру" buttonFunction={startGame} />
+      <div className="button-group">
+        {categories.map((category) => (
+          <Button
+            key={category.value}
+            className={"button"}
+            text={category.name}
+            buttonFunction={() => selectCategory(category.value)}
+          />
+        ))}
+      </div>
     </Wrapper>
   );
 };

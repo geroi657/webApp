@@ -51,7 +51,7 @@ const Question = ({ questionData, onAnswer }) => {
           </div>
         );
       })}
-      <Button text={"Ответить"} buttonFunction={handleSubmit}></Button>
+      <Button className={"button"} text={"Ответить"} buttonFunction={handleSubmit}></Button>
       {description && <p className="description">{description}</p>}
     </div>
   );

@@ -7,6 +7,12 @@
   height: 100vh;
 }
 
+.game .quit {
+  position: absolute;
+  top: 650px;
+  right: 200px;
+}
+
 .score-section {
   margin-top: 20px;
 }
@@ -15,6 +21,8 @@
   color: #4CAF50;
   margin-bottom: 50px;
 }
+
+
 
 
 
