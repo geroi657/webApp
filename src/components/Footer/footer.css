@@ -1,8 +1,9 @@
 .footer{
     border-right: 1px solid white;
     border-left: 1px solid white;
+    border: 1px solid white;
     padding: 2rem;
-    height: 20rem;
+    height: 18rem;
 }
 
 .footerWrapper{
@@ -14,5 +15,9 @@
     width: 25%;
     grid-template-columns: 1fr;
     gap: 0.5rem;
+}
+
+.footerLogo {
+    margin-bottom: 30px;
 }
 

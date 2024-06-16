@@ -10,13 +10,12 @@ export default function Footer({
     buttonHref4, text4,
     paragraphContent1,
     paragraphContent2,
-    paragraphContent3,
-    paragraphContent4}){
+    paragraphContent3}){
     return (
         <div className="footer">
             <div className="footerWrapper">
                 <div className="footerWrapperBlock">
-                    <Button variant="logo footerLogo" buttonHref={ buttonHref1 } text={ text1 }></Button>
+                    <Button variant="footerLogo" buttonHref={ buttonHref1 } text={ text1 }></Button>
                     <Paragraph variant="footerParagraph" paragraphContent={ paragraphContent1 }></Paragraph>
                     <Paragraph variant="footerParagraph" paragraphContent={ paragraphContent2 }></Paragraph>
                     <Paragraph variant="footerParagraph" paragraphContent={ paragraphContent3 }></Paragraph>
@@ -27,7 +26,6 @@ export default function Footer({
                     <Button variant="footerLink" buttonHref={ buttonHref4 } text={ text4 }></Button>
                 </div>
             </div>
-            <Paragraph variant="footerParagraphRight" paragraphContent={ paragraphContent4 }></Paragraph>
         </div>
     )
 }

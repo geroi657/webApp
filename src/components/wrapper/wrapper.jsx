@@ -1,9 +1,7 @@
 import './wrapper.css';
 
-export default function Wrapper({children}) {
+export default function Wrapper({children, variant}) {
     return (
-        <div className="wrapper">
-            {children}
-        </div>
+        <div className={variant ? "wrapper " + (variant): "wrapper"}>{children}</div>
     );
 }

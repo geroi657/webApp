@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .center_B__container{
@@ -22,6 +23,7 @@
 
 .center_B__background{
     position: absolute;
+    opacity: 25%;
     top: 0;
     right: 0;
     width: 100%;

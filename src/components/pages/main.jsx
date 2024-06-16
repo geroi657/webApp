@@ -2,6 +2,7 @@ import Container from '../container/container.jsx';
 import Wrapper from '../wrapper/wrapper.jsx';
 import Left_B from '../left_B/left_B.jsx';
 import Center_B from '../Center_B/center_B.jsx';
+import Footer from '../Footer/footer.jsx'
 
 export const Main = () => {
     return (
@@ -13,6 +14,7 @@ export const Main = () => {
                         headingContent={"Хочешь стать Web-разработчиком?"} 
                         paragraphContent={"Попробуй наши курсы, где ты сможешь в игровой форме обучиться базовым концептам Web-программирования"}
                         buttonContent={"Перейти к курсам"}
+                        buttonHref={"/html-game"}
                         backgroundURL={"/src/assets/giphy.gif"}>
                     </Left_B>
                 </Container>
@@ -20,10 +22,10 @@ export const Main = () => {
                     <Center_B 
                         level={"2"} 
                         headingContent={"HTML Game"} 
-                        paragraphContent={"I HATE NIGGERS"} 
+                        paragraphContent={"Это обучающая игра, которая поможет вам освоить основы HTML. Вы будете создавать веб-страницу, шаг за шагом, изучая HTML-теги и атрибуты. Игра предназначена для начинающих веб-разработчиков и всех, кто хочет узнать, как создавать собственные веб-страницы."} 
                         buttonContent={"Начать игру"}
                         buttonHref={"/html-game"}
-                        backgroundURL={"/src/assets/150199145759869221741317 1.png"}></Center_B>
+                        backgroundURL={"/src/assets/1636593444_42-papik-pro-p-html-risunok-fona-43.jpg"}></Center_B>
                 </Container>
                 <Container>
                     <Left_B 
@@ -47,13 +49,23 @@ export const Main = () => {
                 </Container>
                 <Container>
                     <Left_B 
-                        level={"2"} 
-                        headingContent={"Поддержите нас на Patreon"} 
-                        paragraphContent={"Если вам нравится наша разработка, вы можете поддержать нас на Patreon, либо по прямому переводу"}
-                        buttonContent={"Посмотреть виды переводов"}
-                        backgroundURL={"/src/assets/downloads_logomark_color_on_white@2x.png"}>
+                        level={"1"} 
+                        headingContent={"И это только начало"} 
+                        paragraphContent={"У нас в планах огроменное количество подобного рода игр! Если вам нравится наша разработка, вы можете следить за нашими будущими играми/проектами на нашем GitHub"}
+                        buttonContent={"Следить"}
+                        buttonHref={"https://github.com/geroi657/webApp"}
+                        backgroundURL={"/src/assets/logo.jpg"}>
                     </Left_B>
                 </Container>
+                <Footer 
+                    buttonHref1="" text1="WA"
+                    buttonHref2="" text2="HTML"
+                    buttonHref3="" text3="CSS"
+                    buttonHref4="" text4="JavaScript"
+                    paragraphContent1="WebApp 2024"
+                    paragraphContent2="All rights reserved (try me)"
+                    paragraphContent3="Made without knowing much">
+                </Footer>
             </Wrapper>
             </>
 

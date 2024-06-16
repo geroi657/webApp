@@ -1,9 +1,7 @@
 import './section.css';
 
-export default function Section({children}){
+export default function Section({children, variant}){
     return (
-        <section>
-            {children}
-        </section>
+        <section className={variant ? "section " + (variant): "section"}>{ children } </section>
     );
 }

@@ -5,7 +5,7 @@ import Paragraph from '../../paragraph/paragraph';
 import Wrapper from '../../wrapper/wrapper';
 import Heading from '../../heading/heading';
 
-const Intro = ({ startGame, selectCategory }) => {
+const Intro = ({ selectCategory }) => {
   const categories = [
     { name: 'Основы CSS', value: 'basic' },
     { name: 'Селекторы', value: 'selectors' },
@@ -15,8 +15,8 @@ const Intro = ({ startGame, selectCategory }) => {
   ];
 
   return (
-    <Wrapper className={"intro-section"}>
-      <Heading level={2} headingContent={"Добро пожаловать в CSS Quiz!"}/>
+    <Wrapper variant={"intro-section"}>
+      <Heading level={2} headingContent={"Добро пожаловать в Broken Quiz!"}/>
 
       <Paragraph paragraphContent={"Это не просто обычный квиз, где вам нужно выбирать правильные ответы. Здесь каждый ваш выбор будет сопровождаться подробным объяснением, помогающим лучше понять и запомнить материал."} />
       
@@ -44,7 +44,7 @@ const Intro = ({ startGame, selectCategory }) => {
         {categories.map((category) => (
           <Button
             key={category.value}
-            className={"button"}
+            variant={"button"}
             text={category.name}
             buttonFunction={() => selectCategory(category.value)}
           />
