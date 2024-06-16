@@ -1,0 +1,13 @@
+#css-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+#css-grid > Sidebar {
+    grid-column: 1;
+}
+
+#css-grid > Board {
+    grid-column: 2;
+}
