@@ -1,17 +1,16 @@
 import './sidebar.css';
 import levels from '../grid-game/levels.js';
 import { useState, useEffect, useRef } from 'react';
+import Button from '../../../button/button.jsx';
+import ButtonRef from '../../../button/buttonRef.jsx';
 
 const Sidebar = ({ currentLevel, setCurrentLevel}) => {
     const [before, setBefore] = useState('');
     const [after, setAfter] = useState('');
     const [isCorrect, setIsCorrect] = useState(null);
     const [fadeClass, setFadeClass] = useState('');
-    const [userCode, setUserCode] = useState(() => localStorage.getItem('userCode') || '');
-    const [guessHistory, setGuessHistory] = useState(() => {
-        const savedHistory = localStorage.getItem('guessHistory');
-        return savedHistory ? JSON.parse(savedHistory) : [];
-    });
+    const [userCode, setUserCode] = useState('');
+    const [guessHistory, setGuessHistory] = useState([]);
     const nextButtonRef = useRef(null);
 
     const goToPreviousLevel = () => {
@@ -60,7 +59,6 @@ const Sidebar = ({ currentLevel, setCurrentLevel}) => {
 
     const applyUserStyle = (styleString) => {
         const level = levels[currentLevel];
-        console.log(level.selector);
 
         if (level.selector) {
             const elements = document.querySelectorAll('#garden' + level.selector);
@@ -76,18 +74,21 @@ const Sidebar = ({ currentLevel, setCurrentLevel}) => {
     const parseCSSString = (cssString) => {
         const rules = cssString.split(';')
             .map(rule => rule.trim())
-            .filter(Boolean)
+            .filter(rule => rule) // фильтрация пустых строк
             .reduce((acc, rule) => {
-                const [property, ...values] = rule.split(':').map(part => part.trim());
-                if (property && values.length > 0) {
-                    acc[property] = values.join(':').replace(/\s+/g, ''); // Preserve colons in values
+                const [property, value] = rule.split(':').map(part => part.trim());
+                if (property && value) {
+                    // Регулярное выражение для проверки формата значения
+                    const isValidValue = /^\s*(?:\w+\s+)?\d+\s*(?:\/\s*\d+\s*)?$/.test(value);
+                    if (isValidValue) {
+                        acc[property] = value;
+                    }
                 }
                 return acc;
             }, {});
         return rules;
     };
     
-
     const handleNextButtonClick = () => {
         try {
             const userStyle = userCode.trim();
@@ -132,13 +133,11 @@ const Sidebar = ({ currentLevel, setCurrentLevel}) => {
     return (
         <div id="sidebar">
             <div id="levelsWrapper">
-                <br />
-                <p>
-                    <button onClick={goToPreviousLevel}>&lt;</button>
-                    <span>Смена уровня</span>
-                    <button onClick={goToNextLevel}>&gt;</button>
-                </p>
-                <br />
+                <div id="levelsChange">
+                    <Button text="&lt;" buttonFunction={goToPreviousLevel}/>
+                    <span id="levelChangeSpan">Смена уровня</span>
+                    <Button text="&gt;" buttonFunction={goToNextLevel}/>
+                </div>
                 <div id="levels" dangerouslySetInnerHTML={{ __html: levels[currentLevel].instructions }}></div>
             </div>
             <div id="editor">
@@ -155,8 +154,13 @@ const Sidebar = ({ currentLevel, setCurrentLevel}) => {
                         onKeyPress={handleTextareaKeyPress}>
                     </textarea>
                     <pre id="after">{after}</pre>
+                    <ButtonRef
+                        text="Next"
+                        variant={`translate ${fadeClass}`}
+                        buttonFunction={handleNextButtonClick}
+                        ref={nextButtonRef}
+                    />
                 </div>
-                <button id="next" className={`translate ${fadeClass}`} onClick={handleNextButtonClick} ref={nextButtonRef}>Next</button>
             </div>
             <div id="guessHistory">
                 <h3>Guess History</h3>

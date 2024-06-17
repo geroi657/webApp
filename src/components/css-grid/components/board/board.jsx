@@ -42,21 +42,25 @@ const Board = ({ currentLevel }) => {
             'c': 'carrot',
             'w': 'weed'
         };
-
-        level.board.split('').forEach(c => {
+    
+        level.board.split('').forEach((c) => {
             const color = colors[c];
             if (color) {
                 const plant = createDivWithClass(`plant ${color}`);
                 const treatment = createDivWithClass(`treatment ${color}`);
-
+    
                 appendChildWithClass(plant, 'bg');
                 appendChildWithClass(treatment, 'bg');
+                
+                console.log(plantsRef.current, gardenRef.current);
 
                 plantsRef.current.appendChild(plant);
                 gardenRef.current.appendChild(treatment);
             }
         });
     };
+    
+    
 
     const createDivWithClass = (className) => {
         const div = document.createElement('div');
@@ -73,14 +77,14 @@ const Board = ({ currentLevel }) => {
     return (
         <div id="board">
             <div id="overlay">
-                {Array.from({ length: 40 }, (_, i) => (
+                {Array.from({ length: 25 }, (_, i) => (
                     <span key={i} className="plot"></span>
                 ))}
             </div>
             <div id="plants" ref={plantsRef}></div>
             <div id="garden" ref={gardenRef}></div>
             <div id="soil">
-                {Array.from({ length: 40 }, (_, i) => (
+                {Array.from({ length: 25 }, (_, i) => (
                     <span key={i} className="plot"></span>
                 ))}
             </div>
