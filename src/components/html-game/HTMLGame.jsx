@@ -5,32 +5,46 @@ import Visualizer from './Visualizer';
 import './HTMLGame.css';
 
 const tasks = [
-    { id: 1, description: "Добавьте заголовок уровня H1 с текстом 'Sample text'.", expectedHtml: "<h1>Sample text</h1>" },
-    { id: 2, description: "Создайте параграф с текстом 'This is a paragraph'.", expectedHtml: "<p>This is a paragraph</p>" },
-    { id: 3, description: "Добавьте изображение с атрибутом src указывающим на 'image.jpg'.", expectedHtml: '<img src="image.jpg" />' },
-    { id: 4, description: "Создайте ссылку на 'https://example.com' с текстом 'Visit Example'.", expectedHtml: '<a href="https://example.com">Visit Example</a>' },
-    { id: 5, description: "Добавьте ненумерованный список с тремя элементами.", expectedHtml: "<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>" },
-    { id: 6, description: "Создайте нумерованный список с двумя элементами.", expectedHtml: "<ol><li>Item 1</li><li>Item 2</li></ol>" },
-    { id: 7, description: "Добавьте кнопку с текстом 'Click Me'.", expectedHtml: "<button>Click Me</button>" },
-    { id: 8, description: "Создайте текстовое поле с плейсхолдером 'Enter your name'.", expectedHtml: '<input type="text" placeholder="Enter your name" />' },
-    { id: 9, description: "Добавьте div с классом 'container'.", expectedHtml: '<div class="container"></div>' },
-    { id: 10, description: "Создайте элемент span с текстом 'Inline text'.", expectedHtml: "<span>Inline text</span>" }
+    { id: 1, description: "Добавьте заголовок уровня H1.", expectedHtml: "<h1></h1>" },
+    { id: 2, description: "Создайте параграф.", expectedHtml: "<p></p>" },
+    { id: 3, description: "Добавьте изображение.", expectedHtml: '<img />' },
+    { id: 4, description: "Создайте ссылку.", expectedHtml: '<a href="https://example.com"></a>' },
+    { id: 5, description: "Добавьте ненумерованный список.", expectedHtml: "<ul></ul>" },
+    { id: 6, description: "Создайте нумерованный список.", expectedHtml: "<ol></ol>" },
+    { id: 7, description: "Добавьте кнопку.", expectedHtml: "<button></button>" },
+    { id: 8, description: "Создайте текстовое поле.", expectedHtml: '<input type="text" />' },
+    { id: 9, description: "Добавьте заголовок второго уровня с текстом.", expectedHtml: "<h2></h2>" },
+    { id: 10, description: "Создайте таблицу.", expectedHtml: "<table></table>" }
 ];
 
-const Game = () => {
-    const [htmlCode, setHtmlCode] = useState('');
+const HTMLGame = () => {
+    const [htmlCodes, setHtmlCodes] = useState(tasks.map(() => ''));
     const [selectedTask, setSelectedTask] = useState(tasks[0]);
     const [errorMessage, setErrorMessage] = useState('');
-    const [displayHtml, setDisplayHtml] = useState('<div style="background: black; width: 100%; height: 50px;"></div>');
 
     const handleAnswerSubmit = (code) => {
-        setHtmlCode(code);
+        const updatedHtmlCodes = htmlCodes.map((htmlCode, index) =>
+            index === selectedTask.id - 1 ? code : htmlCode
+        );
+
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = code.trim();
 
-        if (tempDiv.innerHTML === selectedTask.expectedHtml) {
+        const expectedHtmlTags = document.createElement('div');
+        expectedHtmlTags.innerHTML = selectedTask.expectedHtml.trim();
+
+        // Check if all expected tags are present in user's HTML
+        let allTagsPresent = true;
+        expectedHtmlTags.childNodes.forEach((expectedTag) => {
+            const tagName = expectedTag.tagName.toLowerCase();
+            if (!tempDiv.querySelector(tagName)) {
+                allTagsPresent = false;
+            }
+        });
+
+        if (allTagsPresent) {
             setErrorMessage('');
-            setDisplayHtml(code);
+            setHtmlCodes(updatedHtmlCodes);
         } else {
             setErrorMessage('Неправильный HTML код. Попробуйте снова.');
         }
@@ -38,10 +52,10 @@ const Game = () => {
 
     const handleTaskSelect = (task) => {
         setSelectedTask(task);
-        setHtmlCode(''); // Очистить код при выборе нового задания
-        setErrorMessage(''); // Очистить сообщение об ошибке при выборе нового задания
-        setDisplayHtml('<div style="background: black; width: 100%; height: 50px;"></div>'); // Обновить шаблон для нового задания
+        setErrorMessage('');
     };
+
+    const displayHtml = htmlCodes.join('');
 
     return (
         <div className="game-container">
@@ -58,7 +72,7 @@ const Game = () => {
                     ))}
                 </div>
                 <Task task={selectedTask} />
-                <AnswerForm onAnswerSubmit={handleAnswerSubmit} initialCode={htmlCode} />
+                <AnswerForm onAnswerSubmit={handleAnswerSubmit} initialCode={htmlCodes[selectedTask.id - 1]} />
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
             <div className="right-column">
@@ -68,4 +82,4 @@ const Game = () => {
     );
 };
 
-export default Game;
+export default HTMLGame;

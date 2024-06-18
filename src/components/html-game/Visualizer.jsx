@@ -1,11 +1,11 @@
+// Visualizer.jsx
 import React from 'react';
-import TravelBlogPage from './TravelBlogPage';
+import './Visualizer.css';
+
 
 const Visualizer = ({ htmlCode }) => {
     return (
-        <div className="visualizer">
-            <TravelBlogPage replacement={<div dangerouslySetInnerHTML={{ __html: htmlCode }} />} />
-        </div>
+        <div className="preview" dangerouslySetInnerHTML={{ __html: htmlCode }}></div>
     );
 };
 

@@ -1,19 +1,77 @@
-.visualizer {
-    margin-top: 10px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
+/* Visualizer.css */
+
+.preview {
+    padding: 20px;
+    background-color: white;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    word-wrap: break-word;
+    font-family: Arial, sans-serif;
 }
 
-.output {
-    margin-top: 10px;
-    background-color: black;
+.preview h1 {
+    color: #19191E;
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+    margin: 12px 0;
+    color: #19191E;
+}
+
+
+.preview p {
+    color: #19191E;
+    margin: 10px 0;
+}
+
+.preview table, .preview td, .preview tr {
+    color: #19191E;
+    margin: 10px 0;
+}
+
+.preview ul, .preview ol, .preview li {
+    margin: 10px 0;
+    color: #19191E;
+    padding-left: 20px;
+}
+
+.preview img {
+    color: #19191E;
+    max-width: 100%;
+    height: auto;
+}
+
+.preview a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.preview a:hover {
+    text-decoration: underline;
+}
+
+.preview button {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
-    border: 1px solid white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.preview button:hover {
+    background-color: #0056b3;
+}
+
+.preview input[type="text"] {
     padding: 10px;
-    border-radius: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }

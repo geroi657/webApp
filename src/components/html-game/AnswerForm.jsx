@@ -13,27 +13,13 @@ const AnswerForm = ({ onAnswerSubmit, initialCode }) => {
         onAnswerSubmit(input);
     };
 
-    const handleFocus = (e) => {
-        if (e.target.value === 'Введите ваш HTML код здесь') {
-            setInput('');
-        }
-    };
-
-    const handleBlur = (e) => {
-        if (e.target.value.trim() === '') {
-            setInput('Введите ваш HTML код здесь');
-        }
-    };
-
     return (
         <form className="answer-form" onSubmit={handleSubmit}>
-      <textarea
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          placeholder="Введите ваш HTML код здесь"
-      />
+            <textarea
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Введите ваш HTML код здесь"
+            />
             <button type="submit">Отправить</button>
         </form>
     );

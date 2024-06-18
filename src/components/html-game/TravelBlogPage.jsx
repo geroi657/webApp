@@ -1,39 +1,39 @@
 import React from 'react';
-import styles from './TravelBlogPage.module.css';
+import './TravelBlogPage.module.css';
 
 const TravelBlogPage = ({ replacement }) => {
     return (
-        <div className={styles.travelBlogPage}>
-            <header className={styles.travelBlogHeader}>
+        <div className="travel-blog-page">
+            <header id="header-element">
                 <h1>Блог о путешествиях</h1>
             </header>
-            <nav className={styles.travelBlogNav}>
+            <nav>
                 <a href="#about">О нас</a> |
                 <a href="#contact">Контакты</a>
             </nav>
-            <main className={styles.travelBlogMain}>
-                <section className={styles.travelBlogSection}>
-                    <article className={styles.travelBlogArticle}>
-                        <h2 className={styles.travelBlogH2}>Путешествие в Италию</h2>
+            <main>
+                <section>
+                    <article id="article-1">
+                        <h2>Путешествие в Италию</h2>
                         <p>Это было незабываемое путешествие...</p>
-                        {replacement || <div style={{ background: 'black', width: '100px', height: '20px' }}></div>}
+                        <img src="italy.jpg" alt="Италия" />
                     </article>
-                    <article className={styles.travelBlogArticle}>
-                        <h2 className={styles.travelBlogH2}>Поездка в Японию</h2>
+                    <article id="article-2">
+                        <h2>Поездка в Японию</h2>
                         <p>Япония - страна восходящего солнца...</p>
-                        <img src="japan.jpg" alt="Япония" className={styles.travelBlogImg} />
+                        <img src="japan.jpg" alt="Япония" />
                     </article>
                 </section>
-                <aside className={styles.travelBlogAside}>
-                    <h3 className={styles.travelBlogH3}>Подписаться на рассылку</h3>
-                    <form method="post" className={styles.travelBlogForm}>
+                <aside id="subscribe-section">
+                    <h3>Подписаться на рассылку</h3>
+                    <form method="post">
                         <input type="text" placeholder="Введите ваше имя" />
                         <input type="email" placeholder="Введите ваш email" />
                         <button type="submit">Подписаться</button>
                     </form>
                 </aside>
             </main>
-            <footer className={styles.travelBlogFooter}>
+            <footer>
                 <p>© 2024 Блог о путешествиях</p>
             </footer>
         </div>
