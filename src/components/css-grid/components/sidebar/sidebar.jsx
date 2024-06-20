@@ -67,6 +67,7 @@ const Sidebar = ({ currentLevel, setCurrentLevel}) => {
                 Object.keys(parsedStyles).forEach(property => {
                     element.style[property] = parsedStyles[property];
                 });
+                
             });
         }
     };
@@ -74,15 +75,11 @@ const Sidebar = ({ currentLevel, setCurrentLevel}) => {
     const parseCSSString = (cssString) => {
         const rules = cssString.split(';')
             .map(rule => rule.trim())
-            .filter(rule => rule) // фильтрация пустых строк
+            .filter(Boolean)
             .reduce((acc, rule) => {
-                const [property, value] = rule.split(':').map(part => part.trim());
-                if (property && value) {
-                    // Регулярное выражение для проверки формата значения
-                    const isValidValue = /^\s*(?:\w+\s+)?\d+\s*(?:\/\s*\d+\s*)?$/.test(value);
-                    if (isValidValue) {
-                        acc[property] = value;
-                    }
+                const [property, ...values] = rule.split(':').map(part => part.trim());
+                if (property && values.length > 0) {
+                    acc[property] = values.join(':'); // Сохраняем пробелы в значениях
                 }
                 return acc;
             }, {});
