@@ -15,7 +15,7 @@ export const Main = () => {
                         paragraphContent={"Попробуй наши курсы, где ты сможешь в игровой форме обучиться базовым концептам Web-программирования"}
                         buttonContent={"Перейти к курсам"}
                         buttonHref={"/html-game"}
-                        backgroundURL={"/src/assets/giphy.gif"}>
+                        backgroundURL={"/assets/giphy.gif"}>
                     </Left_B>
                 </Container>
                 <Container>
@@ -25,7 +25,7 @@ export const Main = () => {
                         paragraphContent={"Это обучающая игра, которая поможет вам освоить основы HTML. Вы будете создавать веб-страницу, шаг за шагом, изучая HTML-теги и атрибуты. Игра предназначена для начинающих веб-разработчиков и всех, кто хочет узнать, как создавать собственные веб-страницы."} 
                         buttonContent={"Начать игру"}
                         buttonHref={"/html-game"}
-                        backgroundURL={"/src/assets/1636593444_42-papik-pro-p-html-risunok-fona-43.jpg"}></Center_B>
+                        backgroundURL={"/assets/1636593444_42-papik-pro-p-html-risunok-fona-43.jpg"}></Center_B>
                 </Container>
                 <Container>
                     <Left_B 
@@ -34,7 +34,7 @@ export const Main = () => {
                         paragraphContent={"Добро пожаловать в Grid Garden — место, где вы можете вырастить свой собственный сад благодаря CSS коду"}
                         buttonContent={"Начать игру"}
                         buttonHref={"/css-grid-garden"}
-                        backgroundURL={"/src/assets/garden_zen_japanese_garden_grid-1375991.jpg"}>
+                        backgroundURL={"/assets/garden_zen_japanese_garden_grid-1375991.jpg"}>
                     </Left_B>
                 </Container>
                 <Container>
@@ -44,7 +44,7 @@ export const Main = () => {
                         paragraphContent={"По сути, это всего лишь обычный квиз с вопросами, но есть нюанс. Ответы уже выделены и везде показано конкретно какие правильные. Но в чем тогда смысл? А смысл, собственно, в изучении этих ответов. Не только правильных, но и неправильных. При выборе каждого ответа будет высвечиваться краткая сводка информации о нем. Этакая игра-энциклопедия по базе знаний CSS"} 
                         buttonContent={"Начать игру"}
                         buttonHref={"/css-quiz"}
-                        backgroundURL={"/src/assets/222f9cd89d45df50-w820-h440.jpg"}>
+                        backgroundURL={"/assets/222f9cd89d45df50-w820-h440.jpg"}>
                     </Center_B>
                 </Container>
                 <Container>
@@ -54,7 +54,7 @@ export const Main = () => {
                         paragraphContent={"У нас в планах огроменное количество подобного рода игр! Если вам нравится наша разработка, вы можете следить за нашими будущими играми/проектами на нашем GitHub"}
                         buttonContent={"Следить"}
                         buttonHref={"https://github.com/geroi657/webApp"}
-                        backgroundURL={"/src/assets/logo.jpg"}>
+                        backgroundURL={"/assets/logo.jpg"}>
                     </Left_B>
                 </Container>
                 <Footer 
