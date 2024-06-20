@@ -85,20 +85,13 @@
 }
 
 .right-column {
-    margin-top: 90px;
+    margin-top: calc(64px);
     flex: 1;
     padding: 20px;
     color: #19191E;
     border-left: 1px solid #ddd;
     overflow-y: auto;
     box-sizing: border-box;
-    min-height: 100vh;
-    background-color: #00007c;
+    background-color: #ffffff;
 }
 
-.preview {
-    padding: 20px;
-
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}

@@ -2,26 +2,25 @@
 
 .preview {
     padding: 20px;
-    background-color: white;
-
+    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: auto;
     word-wrap: break-word;
+    flex-direction: column;
     font-family: Arial, sans-serif;
 }
 
 .preview h1 {
     color: #19191E;
     font-size: 40px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
     margin: 12px 0;
     color: #19191E;
 }
-
 
 .preview p {
     color: #19191E;
@@ -33,16 +32,29 @@
     margin: 10px 0;
 }
 
-.preview ul, .preview ol, .preview li {
-    margin: 10px 0;
+.preview ul {
+    list-style-type: disc;
+    padding-left: 40px;
     color: #19191E;
-    padding-left: 20px;
+}
+
+.preview ol {
+    list-style-type: decimal;
+    padding-left: 40px;
+    color: #19191E;
+}
+
+.preview li {
+    margin: 5px 0;
+    color: #19191E;
 }
 
 .preview img {
     color: #19191E;
     max-width: 100%;
     height: auto;
+    display: block; /* Ensure image is displayed as a block element */
+    margin: 20px 0; /* Add margin to separate it from other elements */
 }
 
 .preview a {
@@ -69,9 +81,20 @@
 }
 
 .preview input[type="text"] {
-    padding: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+}
+
+.preview ul, .preview ol {
+    list-style-position: outside; /* Ensure list markers are outside the content flow */
+}
+
+.preview ul li::marker, .preview ol li::marker {
+    color: #19191E;
+    font-weight: bold;
 }

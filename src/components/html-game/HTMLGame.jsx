@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import Task from './Task';
 import AnswerForm from './AnswerForm';
 import Visualizer from './Visualizer';
+import Theory from './Theory';
 import './HTMLGame.css';
 
 const tasks = [
-    { id: 1, description: "Добавьте заголовок уровня H1.", expectedHtml: "<h1></h1>" },
-    { id: 2, description: "Создайте параграф.", expectedHtml: "<p></p>" },
-    { id: 3, description: "Добавьте изображение.", expectedHtml: '<img />' },
-    { id: 4, description: "Создайте ссылку.", expectedHtml: '<a href="https://example.com"></a>' },
-    { id: 5, description: "Добавьте ненумерованный список.", expectedHtml: "<ul></ul>" },
-    { id: 6, description: "Создайте нумерованный список.", expectedHtml: "<ol></ol>" },
-    { id: 7, description: "Добавьте кнопку.", expectedHtml: "<button></button>" },
-    { id: 8, description: "Создайте текстовое поле.", expectedHtml: '<input type="text" />' },
-    { id: 9, description: "Добавьте заголовок второго уровня с текстом.", expectedHtml: "<h2></h2>" },
-    { id: 10, description: "Создайте таблицу.", expectedHtml: "<table></table>" }
+    { id: 1, description: "Добавьте заголовок уровня H1.", expectedHtml: "<h1></h1>", theory: "Элемент <h1> используется для обозначения заголовка самого высокого уровня. В HTML есть шесть уровней заголовков, от <h1> до <h6>." },
+    { id: 2, description: "Создайте параграф.", expectedHtml: "<p></p>", theory: "Элемент <p> используется для создания параграфов текста. Параграфы автоматически имеют отступы сверху и снизу." },
+    { id: 3, description: "Добавьте изображение.", expectedHtml: '<img />', theory: "Элемент <img> используется для вставки изображений. Необходимо указать атрибут src для определения пути к изображению." },
+    { id: 4, description: "Создайте ссылку.", expectedHtml: '<a href="https://example.com"></a>', theory: "Элемент <a> используется для создания ссылок. Атрибут href указывает URL, на который будет вести ссылка." },
+    { id: 5, description: "Добавьте ненумерованный список.", expectedHtml: "<ul></ul>", theory: "Элемент <ul> используется для создания ненумерованных списков, которые обычно отображаются с маркерами." },
+    { id: 6, description: "Создайте нумерованный список.", expectedHtml: "<ol></ol>", theory: "Элемент <ol> используется для создания нумерованных списков, которые обычно отображаются с числами." },
+    { id: 7, description: "Добавьте кнопку.", expectedHtml: "<button></button>", theory: "Элемент <button> используется для создания кнопок, которые могут быть нажаты пользователем." },
+    { id: 8, description: "Создайте текстовое поле.", expectedHtml: '<input type="text" />', theory: "Элемент <input type='text'> используется для создания однострочных текстовых полей, в которые пользователи могут вводить текст." },
+    { id: 9, description: "Добавьте заголовок второго уровня", expectedHtml: "<h2></h2>", theory: "Элемент <h2> используется для обозначения заголовка второго уровня. Обычно используется для подразделов." },
+    { id: 10, description: "Создайте таблицу.", expectedHtml: "<table></table>", theory: "Элемент <table> используется для создания таблиц. Таблицы состоят из строк (<tr>) и ячеек (<td> или <th>)." }
 ];
+
 
 const HTMLGame = () => {
     const [htmlCodes, setHtmlCodes] = useState(tasks.map(() => ''));
@@ -72,6 +74,7 @@ const HTMLGame = () => {
                     ))}
                 </div>
                 <Task task={selectedTask} />
+                <Theory theory={selectedTask.theory} />
                 <AnswerForm onAnswerSubmit={handleAnswerSubmit} initialCode={htmlCodes[selectedTask.id - 1]} />
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>

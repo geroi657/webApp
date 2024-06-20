@@ -1,0 +1,19 @@
+.theory {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.theory h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.theory p {
+    color: #262626;
+    font-size: 18px;
+    line-height: 1.5;
+}
